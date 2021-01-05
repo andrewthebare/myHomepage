@@ -1,4 +1,4 @@
 # Andrew's Homepage
-My personal homepage that will be hosted on github prolly. 
+My personal homepage built with React that will be hosted on github prolly. 
 
-! UNDER CONSTRUCTION
+# UNDER CONSTRUCTION
