@@ -31,12 +31,19 @@ const FullScreenBar = (props)=>{
       }
    }
    
+   const checkImg = () =>{
+      if (props.imgSrc){
+         return (
+           <div className={classes.imageHolder}>
+              <img className={classes.image} src={props.imgSrc}/>
+           </div>
+         )
+      }
+   }
+   
    return(
       <div className={classes.background} onLoadStart={()=> checkMobile}>
-         <div className={classes.imageHolder}>
-            <img className={classes.image} src={props.imgSrc}/>
-         </div>
-         {/*<h1 className={classes.textStyle}>{props.textShow}</h1>*/}
+         {checkImg()}
          {checkChildren()}
       </div>
    )

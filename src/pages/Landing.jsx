@@ -9,6 +9,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import BottomBar from "../BottomBar";
 
 import legoMe from "../images/LegoMe.jpg"
+import SquareDisplay from "../Components/SquareDIsplay";
 
 function Landing() {
   const classes = useStyles();
@@ -40,19 +41,26 @@ function Landing() {
       
       >
       </FullScreenBar>
+      
+      <FullScreenBar bgColor={"linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)"}>
+        <h1>I'm a Computer Science student getting a taste for all things coding</h1>
+        <h3>Here's some of my work</h3>
+        <div>
+        {/*  place holder div*/}
+          <SquareDisplay/>
+        </div>
+      </FullScreenBar>
+      
       <FullScreenBar bgColor={'linear-gradient(70deg, #33c88B 30%, #FFf3F3 90%)'}
                      isMobile={isMobile}
                      imgSrc={legoMe}
       >
         <div>
           <a href={'/about'}>
-            <h2>Heading</h2>
+            <h2>Not your average Bare</h2>
             <p>paragraph</p>
           </a>
         </div>
-      </FullScreenBar>
-      <FullScreenBar bgColor={"linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)"}>
-      
       </FullScreenBar>
       
       <BottomBar/>
