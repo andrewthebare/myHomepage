@@ -62,7 +62,7 @@ const useStyles = makeStyles({
       
       display: "flex",
       width: "auto",
-      minHeight: window.innerHeight,
+      minHeight: window.innerHeight-400,
       
       textAlign: "center",
       flexDirection:'row',

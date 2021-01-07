@@ -8,17 +8,23 @@ const SquareDisplay = (props)=>{
   
   return(
     <div className={styles.base}>
-      Hello
+      <h2>{props.title}</h2>
+      <p>{props.description}</p>
     </div>
   )
 }
 
 const useStyles = makeStyles({
   base:{
-    width:'400px',
-    height:'200px',
+    width:'98%',
+    height:'100%',
+    maxHeight:'400px',
     
     border:"solid",
+    borderRadius:50,
+    
+    display:"flex",
+    flexDirection:"column",
   },
 
 });
