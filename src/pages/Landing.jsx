@@ -11,13 +11,25 @@ import BottomBar from "../BottomBar";
 import legoMe from "../images/LegoMe.jpg"
 import SquareDisplay from "../Components/SquareDIsplay";
 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+
 function Landing() {
   const classes = useStyles();
   
   const [sidebarOpen, updateSidebar]=useState(false);
   const [isMobile, updateMobile]=useState(true);
   
-  console.log(window.innerWidth);
+  
+  let settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2
+  };
   
   return (
     <div className="App">
@@ -45,9 +57,25 @@ function Landing() {
       <FullScreenBar bgColor={"linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)"}>
         <h1>I'm a Computer Science student getting a taste for all things coding</h1>
         <h3>Here's some of my work</h3>
-        <div>
-        {/*  place holder div*/}
-          <SquareDisplay/>
+        <div className={classes.slider}>
+          <Slider {...settings}>
+            <SquareDisplay/>
+            <div>
+              <h3>2</h3>
+            </div>
+            <div>
+              <h3>3</h3>
+            </div>
+            <div>
+              <h3>4</h3>
+            </div>
+            <div>
+              <h3>5</h3>
+            </div>
+            <div>
+              <h3>6</h3>
+            </div>
+          </Slider>
         </div>
       </FullScreenBar>
       
@@ -81,5 +109,11 @@ const useStyles = makeStyles({
   },
   sideBar:{
     backgroundColor:'linear-gradient(70deg, #336B8B 30%, #FF8EF3 90%)',
+  },
+  
+  slider:{
+    position:"relative",
+    width:'100%',
+    height:'300px',
   }
 });

@@ -99,6 +99,11 @@ const useStyles = makeStyles({
    
    child:{
       flex: 1,
-      zIndex:'1'
+      zIndex:'1',
+      
+      display: "flex",
+      flexDirection: "column",
+      
+      maxWidth:"100%",
    },
 });
