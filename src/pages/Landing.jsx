@@ -45,15 +45,17 @@ function Landing() {
                      imgSrc={legoMe}
       >
         <div>
-          <h2>Heading</h2>
-          <p>paragraph</p>
+          <a href={'/about'}>
+            <h2>Heading</h2>
+            <p>paragraph</p>
+          </a>
         </div>
       </FullScreenBar>
       <FullScreenBar bgColor={"linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)"}>
       
       </FullScreenBar>
       
-      <BottomBar></BottomBar>
+      <BottomBar/>
     
     </div>
   );
