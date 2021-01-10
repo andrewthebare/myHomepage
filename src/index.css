@@ -21,3 +21,11 @@ code {
 .textWhite{
   color: aliceblue;
 }
+
+#landingBG{
+  background-image: url("./images/WolfgangSEE.jpg");
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: cover;
+  opacity: .95;
+}

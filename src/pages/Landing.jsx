@@ -11,6 +11,7 @@ import BottomBar from "../BottomBar";
 import legoMe from "../images/LegoMe.jpg"
 import gitHub from "../images/gitHubIcon.png"
 import linkedIn from "../images/LinkedIn.png"
+import BayernBG from "../images/WPBayern.jpg"
 
 import SquareDisplay from "../Components/SquareDIsplay";
 import {projectData} from '../projectData'
@@ -54,10 +55,23 @@ function Landing() {
       </Drawer>
       <FullScreenBar bgColor={'linear-gradient(70deg, #336B8B 30%, #FF8EF3 90%)'}
                      isMobile={isMobile}
+                     bgImage={BayernBG}
+                     minHeight={window.innerHeight}
+                     id={'landingBG'}
+                     color={'#ff3333'}
       >
         <h1>Hi, I'm Andrew Bare</h1>
       </FullScreenBar>
-      
+      <FullScreenBar bgColor={'#222222'}
+                     color={'#cccccc'}
+
+      >
+        <div>
+          <h1>
+            Hi, I'm Andrew Bare - a Computer Science student at Clemson University and wannabe freelance software developer
+          </h1>
+        </div>
+      </FullScreenBar>
       <FullScreenBar bgColor={"linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)"}>
         <h1>I'm a Computer Science student getting a taste for all things coding</h1>
         <h3>Here's some of my work</h3>
@@ -91,6 +105,13 @@ function Landing() {
             <h2>Not your average Bare</h2>
             <p>Powered by Sweet Tea, I'm a son of the south</p>
           </a>
+        </div>
+      </FullScreenBar>
+      
+      <FullScreenBar bgColor={'linear-gradient(20deg, #dd558B 30%, #44b3b3 90%)'}>
+        <div>
+          <h1>Wanna get in touch?</h1>
+          <h4></h4>
         </div>
       </FullScreenBar>
       

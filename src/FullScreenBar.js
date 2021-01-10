@@ -41,8 +41,12 @@ const FullScreenBar = (props)=>{
       }
    }
    
+   const checkBGImage = () =>{
+   
+   }
+   
    return(
-      <div className={classes.background} onLoadStart={()=> checkMobile}>
+      <div id={props.id} className={classes.background} onLoadStart={()=> checkMobile}>
          {checkImg()}
          {checkChildren()}
       </div>
@@ -53,22 +57,21 @@ export default FullScreenBar;
 
 const useStyles = makeStyles({
    background: {
-      background: props => props.bgColor,
+      background: props => props.bgColor || '#fff',
       border: 0,
       borderRadius: 3,
       boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-      color: '#333344',
+      color: props => props.color ||'#333344',
       padding: '0 30px',
       
       display: "flex",
       width: "auto",
-      minHeight: window.innerHeight-400,
+      minHeight: props=> props.minHeight ||'100px',
       
       textAlign: "center",
       flexDirection:'row',
       justifyContent:"center",
       alignItems:"center",
-      
    },
    
    textStyle:{
