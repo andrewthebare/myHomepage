@@ -101,7 +101,7 @@ function Landing() {
                      imgSrc={legoMe}
       >
         <div>
-          <a href={'/myhomepage/about'}>
+          <a href={'/myHomepage/about'}>
             <h2>Not your average Bare</h2>
             <p>Powered by Sweet Tea, I'm a son of the south</p>
           </a>
