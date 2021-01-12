@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route,
   NavLink
@@ -13,16 +13,11 @@ import AboutMe from "./pages/AboutMe";
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
-        <Route exact path="/test" component={Test}>
-        </Route>
-        <Route path="/about">
-          <AboutMe/>
-        </Route>
-        <Route path="/">
-          <Landing/>
-        </Route>
+          <Route exact path={'/'}component={Landing}/>
+          <Route exact path={'/about'}component={AboutMe}/>
+          <Route exact path="/test" component={Test}/>
       </Switch>
       </Router>
     </div>
