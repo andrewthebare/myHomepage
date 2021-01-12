@@ -16,7 +16,7 @@ function App() {
       <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route exact path={'/'}component={Landing}/>
-          <Route exact path={'/about'}component={AboutMe}/>
+          <Route exact path={'/myhomepage/about'}component={AboutMe}/>
           <Route exact path="/test" component={Test}/>
       </Switch>
       </Router>
