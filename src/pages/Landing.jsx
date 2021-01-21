@@ -39,7 +39,7 @@ function Landing() {
   };
   
   return (
-    <div className="App">
+    <div className={classes.app}>
       <Button className={classes.list} onClick={()=> {updateSidebar(true)}}>
         <MenuIcon fontSize={"large"}/>
       </Button>
@@ -68,7 +68,7 @@ function Landing() {
       >
         <div>
           <h1>
-            Hi, I'm Andrew Bare - a Computer Science student at Clemson University and wannabe freelance software developer
+            Hi, I'm Andrew Bare - a Computer Science student at Clemson University and aspiring freelance software developer
           </h1>
         </div>
       </FullScreenBar>
@@ -101,9 +101,10 @@ function Landing() {
                      imgSrc={legoMe}
       >
         <div>
-          <a href={'/myHomepage/about'}>
+          <a className={classes.link} href={'/about'}>
             <h2>Not your average Bare</h2>
             <p>Powered by Sweet Tea, I'm a son of the south</p>
+            <h4>Wanna get to know me?</h4>
           </a>
         </div>
       </FullScreenBar>
@@ -111,7 +112,9 @@ function Landing() {
       <FullScreenBar bgColor={'linear-gradient(20deg, #dd558B 30%, #44b3b3 90%)'}>
         <div>
           <h1>Wanna get in touch?</h1>
-          <h4></h4>
+          <h4>Email me: <i>andrewebare21[@]yahoo.com</i></h4>
+          <h5>~or~</h5>
+          <h4>You can find me on these social medias!</h4>
         </div>
       </FullScreenBar>
       
@@ -124,6 +127,9 @@ function Landing() {
 export default Landing;
 
 const useStyles = makeStyles({
+  app:{
+    fontFamily: "sans-serif"
+  },
   list: {
     width: 50,
     position: "absolute"
@@ -160,5 +166,9 @@ const useStyles = makeStyles({
     maxHeight:'100%',
     width:"auto",
     zIndex:1,
-  }
+  },
+  link:{
+    textDecoration: "none",
+    color: '#222222'
+  },
 });
