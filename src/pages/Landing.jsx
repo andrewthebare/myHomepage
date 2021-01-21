@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import Button from "@material-ui/core/Button";
-
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
 import FullScreenBar from "../FullScreenBar";
 import MenuIcon from '@material-ui/icons/Menu';
@@ -60,7 +60,7 @@ function Landing() {
                      id={'landingBG'}
                      color={'#ff3333'}
       >
-        <h1>Hi, I'm Andrew Bare</h1>
+        <h1 className={classes.link}>Hi, I'm Andrew Bare</h1>
       </FullScreenBar>
       <FullScreenBar bgColor={'#222222'}
                      color={'#cccccc'}
@@ -68,13 +68,13 @@ function Landing() {
       >
         <div>
           <h1>
-            Hi, I'm Andrew Bare - a Computer Science student at Clemson University and aspiring freelance software developer
+            Hey, I'm Andrew - a Computer Science student at Clemson University and aspiring freelance software developer
           </h1>
         </div>
       </FullScreenBar>
       <FullScreenBar bgColor={"linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)"}>
         <h1>I'm a Computer Science student getting a taste for all things coding</h1>
-        <h3>Here's some of my work</h3>
+        <h2>Here's some of my work</h2>
         <div className={classes.slider}>
           <Slider {...settings}>
             {projectData.map(block=>{
@@ -104,7 +104,7 @@ function Landing() {
           <a className={classes.link} href={'/about'}>
             <h2>Not your average Bare</h2>
             <p>Powered by Sweet Tea, I'm a son of the south</p>
-            <h4>Wanna get to know me?</h4>
+            <h4>Wanna get to know me? <ArrowForwardIcon/></h4>
           </a>
         </div>
       </FullScreenBar>
@@ -148,7 +148,7 @@ const useStyles = makeStyles({
   },
   
   socialHolder:{
-    maxHeight:'200px',
+    maxHeight:'100px',
     overflow: "hidden",
     
     display:"flex",
@@ -156,7 +156,7 @@ const useStyles = makeStyles({
     justifyContent: "center"
   },
   imgHolder:{
-    display: "block",
+    // display: "block",
     flex:1,
     // maxHeight:'100%',
     // maxWidth:"50%",
@@ -164,7 +164,7 @@ const useStyles = makeStyles({
   img:{
     objectFit: 'cover',
     maxHeight:'100%',
-    width:"auto",
+    // width:"auto",
     zIndex:1,
   },
   link:{

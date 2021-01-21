@@ -72,6 +72,8 @@ const useStyles = makeStyles({
       flexDirection:'row',
       justifyContent:"center",
       alignItems:"center",
+      
+      paddingBottom: "5px"
    },
    
    textStyle:{
